@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        
+
+        p span {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .imglogo{
+            width: 250px;
+            height: 90px;
+        }
+
+        .btnInscrever{
+            width: 180px;
+        }
+        
+        .IconInscrever{
+            font-size: 16px;
+            padding-right: 10px;
+        }
+
+        .IconInscrever2{
+            font-size: 21px;
+        }
+
+        #navbar{
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #navbar a:hover{
+            color: #00636A;
+        }
+
+        #navbar a.active{
+            border-bottom: 1px solid #00636A;
+        }
+
+        #navlink{
+            font-weight: bolder;
+            color: black;
+        }
+
+
+        #ListaNav{
+            font-size: 14px;
+        }
+
+        .carousel {
+            max-width: 600px;  
+            margin: auto;       
+        }
+
+        .carousel-item img {
+            height: 700px;      
+            border-radius: 30px; 
+            object-fit: cover;   
+            width: 100%;         
+        }
+
+        .btngeral:hover {
+            background-color: #2EE59D;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .card:hover{
+            box-shadow: 15px 10px 10px rgba(46, 229, 157, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .carousel-item img {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .carousel-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .carousel-item {
+            border: 5px solid transparent;
+            transition: border-color 6s ease;
+        }
+
+
+    </style>
+<body>
+    <div class="navbar-content">
+        <nav style="font-family: 'Montserrat', sans-serif;" id="navbar" class="navbar navbar-expand-sm bg-white p-0 m-0 fixed-top">
+            <div class="container">
+                <div class="navbar-brand me-auto">
+                    <img class="imglogo" src="/Images/brand.png" alt="">
+                </div>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto gap-5 justify-content-center fw-normal">
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link active" href="">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="">Market</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item pe-4">
+                            <a id="navlogin" style="color: #00636A" class="navLogin nav-link fw-bold" href="">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <button style="background-color: #00636A; width: 180px;" id="BtnCadastro" class="btngeral btn text-white fw-bold">
+                                <i class="IconInscrever bi bi-person-add"></i> Cadastre-se
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+<main>
+<section style="margin-top: 200px;" class=""> 
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-12 text-center text-lg-start" id="MenuEsquerda">
+                <h1 style="font-size: 50px; font-family: Montserrat, sans-serif; padding-top: 100px;" class="text-black fw-bold">Personalize. <br> Terceirize. <br> Expanda.</h1>
+                <p style="font-size: 20px;" class="pt-2 pb-5 text-black fw-normal">Pronto para transformar seu produto ou encontrar a solução perfeita? Cadastre agora e personalize o seu sucesso!</p>
+                <button style="background-color: #00636A; width: 100%; max-width: 400px; height: 70px; font-size: 25px; border-radius: 20px;" class="btngeral btn text-white fw-bold">Cadastre-se agora <i class="ps-5 IconInscrever2 bi bi-chevron-double-right"></i></button>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block text-center">
+                <img class="img-fluid" style="border-radius: 25px;" src="/Images/ImgMain.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr style="width: 25%; margin: 0 auto; border: 1px solid #00636A; margin-bottom: 150px; margin-top: 150px;">
+
+<section style="background-image: linear-gradient(to bottom, #ffffff, #fafcff, #f0faff, #e3f9ff, #d6f9ff, #d6f9ff, #d6f9ff, #d6f9ff, #e3f9ff, #f0faff, #fafcff, #ffffff);">
+    <div class="container pb-3">   
+        <h1 style="font-size: 2.5rem; font-family: Montserrat, sans-serif;" class="fw-bold text-center pb-1">Não sabe como começar?</h1>
+        <p style="font-size: 1.25rem;" class="fw-normal text-center">De uma olhada nos <span style="color: #00636A;">pequenos passos</span> para iniciar uma nova etapa na sua vida</p>
+    </div>
+    <div class="container d-flex flex-column gap-5">
+        <div id="step2" style="font-family: Montserrat, sans-serif;" class="d-flex flex-column w-100 gap-5">
+            <div class="w-100">
+                <div class="d-flex flex-column flex-lg-row mx-auto gap-5 align-items-center pb-4">
+                    <div class="w-100">
+                        <span style="font-size: 2rem;" class="fw-bold">Faça seu cadastro &nbsp</span><i style="font-size: 2rem;" class="bi bi-check-lg"></i><br>
+                        <span style="font-size: 1.2rem;" class="d-block mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, ipsa natus. Corrupti labore fuga recusandae neque officia quisquam eos, iste ad nihil natus doloribus corporis vel, velit consectetur molestias similique?.</span>
+                        <div class="pt-3">
+                            <button style="background-color: #00636A; width: 100%; max-width: 300px; height: 50px; font-size: 1.25rem; border-radius: 20px;" class="btngeral btn text-white fw-bold">Cadastre-se agora</button>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <img style="width: 100%; max-width: 500px;" class="rounded" src="/Images/icon2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-lg-row mx-auto gap-5 align-items-center pb-4">
+                    <div class="d-none d-lg-block">
+                        <img style="width: 100%; max-width: 500px;" class="rounded" src="/Images/icon1.png" alt="">
+                    </div>
+                    <div class="w-100">
+                        <span style="font-size: 2rem;" class="fw-bold">Cadastre seu produto pronto &nbsp</span><i style="font-size: 2rem;" class="bi bi-box-seam"></i><br>
+                        <span style="font-size: 1.2rem;" class="d-block mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, ipsa natus. Corrupti labore fuga recusandae neque officia quisquam eos, iste ad nihil natus doloribus corporis vel, velit consectetur molestias similique?.</span>
+                        <div class="pt-3">
+                            <button style="background-color: #00636A; width: 100%; max-width: 300px; height: 50px; font-size: 1.25rem; border-radius: 20px;" class="btngeral btn text-white fw-bold">Cadastre seu produto</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-lg-row mx-auto gap-5 align-items-center pb-4">
+                    <div class="w-100">
+                        <span style="font-size: 2rem;" class="fw-bold">Comece a vender agora &nbsp</span><i style="font-size: 2rem;" class="bi bi-cash-coin"></i><br>
+                        <span style="font-size: 1.2rem;" class="d-block mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, ipsa natus. Corrupti labore fuga recusandae neque officia quisquam eos, iste ad nihil natus doloribus corporis vel, velit consectetur molestias similique?.</span>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <img style="width: 100%; max-width: 500px;" class="rounded" src="/Images/icon3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+
+<hr style="width: 25%; margin: 0 auto; border: 1px solid #00636A; margin-bottom: 70px; margin-top: 70px;">
+
+<section class="d-flex flex-column py-5">
+
+    <h1 style="font-family: Montserrat, sans-serif; font-size: 50px;" class="text-center fw-bold pb-3">Assinatura Plus</h1>
+    <p class="text-center fw-medium mb-5 pb-5">Com a <span style="color: #00636A;">assinatura Plus</span>, você leva suas vendas para o próximo nível. <br>
+        Aproveite benefícios exclusivos, aumente sua visibilidade e maximize seus lucros com mais facilidade e suporte dedicado.</p>
+
+        <div class="container d-flex justify-content-center">
+            <div class="row justify-content-center">
+            
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+                    <div class="card" style="height: auto; max-width: 600px; width: 100%; border-radius: 20px;">
+                        <div class="card-body text-center d-flex flex-column">
+                            <p style="color: #3f3f3f; font-size: 2rem; font-family: Montserrat, sans-serif;" class="fw-bold py-4">Prata</p>
+                            <ul class="fw-bold" style="font-size: 1rem; font-family: Montserrat, sans-serif;">
+                                <li><p>Visibilidade melhorada nas buscas</p></li>
+                                <li><p>Redução de 2% nas taxas de comissão</p></li>
+                                <li><p>Suporte prioritário via chat</p></li>
+                                <li><p>Relatórios básicos de desempenho</p></li>
+                                <li><p>Limite de cadastro: 10 produtos</p></li>
+                                <li><p>Participação em promoções exclusivas</p></li>
+                                <li><p>Ferramentas básicas de marketing</p></li>
+                                <li><p>Listagem prolongada dos produtos</p></li>
+                                <li><p>Integração com redes sociais</p></li>
+                            </ul>
+                            <div class="d-flex justify-content-center mt-auto">
+                                <button style="background-color: #00636A;" class="btngeral w-75 btn text-white fw-bold">Veja mais!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+                    <div class="card" style="height: auto; max-width: 600px; width: 100%; border-radius: 20px;">
+                        <div class="card-body text-center d-flex flex-column">
+                            <p style="color: #fff980; font-size: 2rem; font-family: Montserrat, sans-serif;" class="fw-bold py-4">Ouro</p>
+                            <ul class="fw-bold" style="font-size: 1rem; font-family: Montserrat, sans-serif;">
+                                <li><p>Destaque premium nas buscas e categorias</p></li>
+                                <li><p>Redução de 5% nas taxas de comissão</p></li>
+                                <li><p>Suporte prioritário via chat e e-mail</p></li>
+                                <li><p>Relatórios avançados de vendas e tendências</p></li>
+                                <li><p>Limite de cadastro: 20 produtos</p></li>
+                                <li><p>Participação em promoções e campanhas premium</p></li>
+                                <li><p>Ferramentas avançadas de marketing</p></li>
+                                <li><p>Listagem prolongada com renovação automática</p></li>
+                                <li><p>Integração com redes sociais e Google Ads</p></li>
+                            </ul>
+                            <div class="d-flex justify-content-center mt-auto">
+                                <button style="background-color: #00636A;" class="btngeral w-75 btn text-white fw-bold">Veja mais!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+                    <div class="card" style="height: auto; max-width: 600px; width: 100%; border-radius: 20px;">
+                        <div class="card-body text-center d-flex flex-column">
+                            <p style="color: #3fdcff; font-size: 2rem; font-family: Montserrat, sans-serif;" class="fw-bold py-4">Diamante</p>
+                            <ul class="fw-bold" style="font-size: 1rem; font-family: Montserrat, sans-serif;">
+                                <li><p>Máxima visibilidade com destaque prioritário</p></li>
+                                <li><p>Redução de 10% nas taxas de comissão</p></li>
+                                <li><p>Suporte dedicado 24/7 via chat, e-mail e telefone</p></li>
+                                <li><p>Relatórios detalhados e insights de mercado</p></li>
+                                <li><p>Cadastro ilimitado de produtos</p></li>
+                                <li><p>Acesso exclusivo a campanhas e promoções especiais</p></li>
+                                <li><p>Ferramentas de marketing profissional</p></li>
+                                <li><p>Listagem vitalícia dos produtos</p></li>
+                                <li><p>Integração com redes sociais, Google Ads e Facebook Ads</p></li>
+                            </ul>
+                            <div class="d-flex justify-content-center mt-auto">
+                                <button style="background-color: #00636A;" class="btngeral w-75 btn text-white fw-bold">Veja mais!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<hr style="width: 25%; margin: 0 auto; border: 1px solid #00636A; margin-bottom: 70px; margin-top: 70px;">
+
+<section>
+    <div class="container">
+        <div class="text-center pb-4">
+            <h1 style="font-family: Montserrat, sans-serif; font-size: 50px;" class="text-center fw-bold pb-1">Dúvidas?</h1>
+            <p class="text-center fw-medium">Nós da WhiteLabel iremos te auxiliar!</p>
+        </div>
+            <div class="d-flex flex-column align-items-center w-75 mx-auto">
+                <button style="border: 1px solid black;" class="btn my-3 w-100">
+                    <a style="text-decoration: none;" href=""><p class="my-auto text-black">1 - Como posso começar a vender no site?</p></a>
+                </button>
+                <button style="border: 1px solid black;" class="btn my-3 w-100">
+                    <a style="text-decoration: none;" href=""><p class="my-auto text-black">2 - Quais são as taxas aplicadas às vendas realizadas na plataforma?</p></a>
+                </button>
+                <button style="border: 1px solid black;" class="btn my-3 w-100">
+                    <a style="text-decoration: none;" href=""><p class="my-auto text-black">3 - Como funciona o sistema de avaliações para vendedores e produtos?</p></a>
+                </button>
+                <button style="border: 1px solid black;" class="btn my-3 w-100">
+                    <a style="text-decoration: none;" href=""><p class="my-auto text-black">4 - Posso personalizar a aparência da minha loja dentro do site?</p></a>
+                </button>
+                <button style="border: 1px solid black;" class="btn my-3 w-100">
+                    <a style="text-decoration: none;" href=""><p class="my-auto text-black">5 - Quais métodos de pagamento são aceitos?</p></a>
+                </button>
+            </div>
+        <div class="w-75 mx-auto align-items-center">
+            <p>Nao encontrou sua duvida? entre em contato diretamento com o suporte <a href="">aqui.</a></p>
+        </div>
+    </div>
+</section>
+</main>
+<footer style="background-image: linear-gradient(to top, #ababab, #00636a); color: white; margin-top: 120px;" class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
+                <h5 class="fw-bold">Sobre Nós</h5>
+                <p class="mb-0">Nós da WhiteLabel oferecemos soluções personalizadas para o seu e-commerce. Descubra como podemos ajudar a expandir seu negócio.</p>
+            </div>
+            <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+                <h5 class="fw-bold">Links Rápidos</h5>
+                <ul class="list-unstyled">
+                    <li><a href="" class="text-white text-decoration-none">Início</a></li>
+                    <li><a href="" class="text-white text-decoration-none">Sobre</a></li>
+                    <li><a href="" class="text-white text-decoration-none">Market</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4 text-center text-md-end">
+                <h5 class="fw-bold">Siga-nos</h5>
+                <div>
+                    <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <p class="mb-0">© 2024 WhiteLabel. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
+
+
