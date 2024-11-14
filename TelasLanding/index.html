@@ -77,7 +77,28 @@
             color: #00acb8;
         }
 
+        .PlanoCard {
+            width: 100%;
+            max-width: 350px;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
 
+        .PlanoCard:hover {
+            transform: translateY(-10px);
+        }
+
+        .plan-price {
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+        .plan-description {
+            font-size: 1.1rem;
+            color: #777;
+        }
 
     </style>
 <body>
@@ -130,7 +151,7 @@
                 </a>
             </div>
             <div class="col-lg-6 d-none d-lg-block text-center">
-                <img class="img-fluid" style="border-radius: 25px;" src="/Images/ImgMain.png" alt="">
+                <img class="img-fluid" style="border-radius: 25px;" src="/Images/6511570.jpg" alt="">
             </div>
         </div>
     </div>
@@ -245,67 +266,55 @@
 
 <hr style="width: 25%; margin: 0 auto; border: 1px solid #00636A; margin-bottom: 100px; margin-top: 100px;">
 
-<section style="background-image: linear-gradient(to bottom, #ffffff, #fafcff, #f0faff, #e3f9ff, #d6f9ff, #d6f9ff, #d6f9ff, #d6f9ff, #e3f9ff, #f0faff, #fafcff, #ffffff); margin-bottom: 100px;" class="d-flex flex-column">
+<section style="font-family: Montserrat, sans-serif;">
+    <h1 class="text-center py-5 text-black fw-bold">Conheça nossos planos!</h1>
+    <div class="container text-center">
+        <div class="row justify-content-center gap-4">
 
-    <h1 style="font-family: Montserrat, sans-serif; font-size: 50px;" class="text-center fw-bold pb-3">Assinatura Plus</h1>
-    <p class="text-center fw-medium mb-5 pb-5">Com a <span style="color: #00636A;">assinatura Plus</span>, você leva suas vendas para o próximo nível. <br>
-        Aproveite benefícios exclusivos, aumente sua visibilidade e maximize seus lucros com mais facilidade e suporte dedicado.</p>
-
-        <div class="container d-flex justify-content-center">
-            <div class="row justify-content-center">
-            
-                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-                    <div class="card" style="height: auto; max-width: 600px; width: 100%; border-radius: 20px;">
-                        <div class="card-body text-center d-flex flex-column">
-                            <p style="color: #3f3f3f; font-size: 2rem; font-family: Montserrat, sans-serif;" class="fw-bold py-4">Prata</p>
-                            <ul class="fw-bold" style="font-size: 1rem; font-family: Montserrat, sans-serif;">
-                                <li><p>Visibilidade melhorada nas buscas</p></li>
-                                <li><p>Redução de 2% nas taxas de comissão</p></li>
-                                <li><p>Suporte prioritário via chat</p></li>
-                                <li><p>Relatórios básicos de desempenho</p></li>
-                                <li><p>Limite de cadastro: 10 produtos</p></li>
-                                <li><p>Participação em promoções exclusivas</p></li>
-                                <li><p>Ferramentas básicas de marketing</p></li>
-                                <li><p>Listagem prolongada dos produtos</p></li>
-                                <li><p>Integração com redes sociais</p></li>
-                            </ul>
-                            <div class="d-flex justify-content-center mt-auto">
-                                <a href="/TelasAssinatura/Assinatura.html" style="background-color: #00636A;" class="btngeral w-75 btn text-white fw-bold">Veja mais!</a>
-                            </div>
-                        </div>
-                    </div>
+                <div style="height: 900px;" class="PlanoCard bg-light">
+                    <h3 class="text-primary">Plano Silver</h3>
+                    <p class="plan-price">R$49/mês</p>
+                    <p class="plan-description">Ideal para quem está começando.</p>
+                    <ul style="height: 577px;" class="list-unstyled pt-5">
+                        <li><p>Destaque premium nas buscas e categorias</p></li>
+                        <li><p>Visibilidade melhorada nas buscas</p></li>
+                        <li><p>Redução de 2% nas taxas de comissão</p></li>
+                        <li><p>Suporte prioritário via chat</p></li>
+                        <li><p>Relatórios básicos de desempenho</p></li>
+                        <li><p>Limite de cadastro: 10 produtos</p></li>
+                        <li><p>Participação em promoções exclusivas</p></li>
+                        <li><p>Ferramentas básicas de marketing</p></li>
+                        <li><p>Listagem prolongada dos produtos</p></li>
+                        <li><p>Integração com redes sociais</p></li>
+                    </ul>
+                    <button class="btn btn-outline-primary mt-3">Assine o Prata</button>
                 </div>
-        
-                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-                    <div class="card" style="height: auto; max-width: 600px; width: 100%; border-radius: 20px;">
-                        <div class="card-body text-center d-flex flex-column">
-                            <p style="color: #fff980; font-size: 2rem; font-family: Montserrat, sans-serif;" class="fw-bold py-4">Ouro</p>
-                            <ul class="fw-bold" style="font-size: 1rem; font-family: Montserrat, sans-serif;">
-                                <li><p>Destaque premium nas buscas e categorias</p></li>
-                                <li><p>Redução de 5% nas taxas de comissão</p></li>
-                                <li><p>Suporte prioritário via chat e e-mail</p></li>
-                                <li><p>Relatórios avançados de vendas e tendências</p></li>
-                                <li><p>Limite de cadastro: 20 produtos</p></li>
-                                <li><p>Participação em promoções e campanhas premium</p></li>
-                                <li><p>Ferramentas avançadas de marketing</p></li>
-                                <li><p>Listagem prolongada com renovação automática</p></li>
-                                <li><p>Integração com redes sociais e Google Ads</p></li>
-                            </ul>
-                            <div class="d-flex justify-content-center mt-auto">
-                                <a href="/TelasAssinatura/Assinatura.html" style="background-color: #00636A; text-decoration: none;" class="btngeral w-75 btn text-white fw-bold">
-                                    Veja mais!
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+ 
+                <div style="height: 900px;" class="PlanoCard bg-warning text-white">
+                    <h3 class="text-white">Plano Gold</h3>
+                    <p class="plan-price">R$99/mês</p>
+                    <p class="plan-description">Plano popular para expandir seu negócio.</p>
+                    <ul style="height: 577px;" class="list-unstyled pt-3">
+                        <li><p>Máxima visibilidade com destaque prioritário</p></li>
+                        <li><p>Destaque premium nas buscas e categorias</p></li>
+                        <li><p>Redução de 5% nas taxas de comissão</p></li>
+                        <li><p>Suporte prioritário via chat e e-mail</p></li>
+                        <li><p>Relatórios avançados de vendas e tendências</p></li>
+                        <li><p>Limite de cadastro: 20 produtos</p></li>
+                        <li><p>Participação em promoções e campanhas premium</p></li>
+                        <li><p>Ferramentas avançadas de marketing</p></li>
+                        <li><p>Listagem prolongada com renovação automática</p></li>
+                        <li><p>Integração com redes sociais e Google Ads</p></li>
+                    </ul>
+                    <button class="btn btn-light mt-3">Assine o Ouro</button>
                 </div>
-        
-                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-                    <div class="card" style="height: auto; max-width: 600px; width: 100%; border-radius: 20px;">
-                        <div class="card-body text-center d-flex flex-column">
-                            <p style="color: #3fdcff; font-size: 2rem; font-family: Montserrat, sans-serif;" class="fw-bold py-4">Diamante</p>
-                            <ul class="fw-bold" style="font-size: 1rem; font-family: Montserrat, sans-serif;">
-                                <li><p>Máxima visibilidade com destaque prioritário</p></li>
+    
+                <div class="PlanoCard bg-info text-white">
+                    <h3 class="text-white">Plano Diamond</h3>
+                    <p class="plan-price">R$199/mês</p>
+                    <p class="plan-description">Para empresas que buscam o máximo desempenho.</p>
+                    <ul style="height: 577px;" class="list-unstyled p-3">
+                        <li><p>Máxima visibilidade com destaque prioritário</p></li>
                                 <li><p>Redução de 10% nas taxas de comissão</p></li>
                                 <li><p>Suporte dedicado 24/7 via chat, e-mail e telefone</p></li>
                                 <li><p>Relatórios detalhados e insights de mercado</p></li>
@@ -314,16 +323,13 @@
                                 <li><p>Ferramentas de marketing profissional</p></li>
                                 <li><p>Listagem vitalícia dos produtos</p></li>
                                 <li><p>Integração com redes sociais, Google Ads e Facebook Ads</p></li>
-                            </ul>
-                            <div class="d-flex justify-content-center mt-auto">
-                                <a href="/TelasAssinatura/Assinatura.html" style="background-color: #00636A;" class="btngeral w-75 btn text-white fw-bold">Veja mais!</a>
-                            </div>
-                        </div>
-                    </div>
+                    </ul>
+                    <button class="btn btn-light mt-3">Assine o Diamante</button>
                 </div>
+    
             </div>
         </div>
-</section>
+    </section>
 
 <hr style="width: 25%; margin: 0 auto; border: 1px solid #00636A; margin-bottom: 70px; margin-top: 70px;">
 
