@@ -11,6 +11,10 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
         body {
             font-family: 'Roboto', sans-serif;
@@ -58,28 +62,62 @@
             background-color: #004d40;
         }
 
-        .navbar {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #ffffff;
-            padding: 10px 0;
+        p span {
+            font-family: 'Poppins', sans-serif;
         }
 
-        .navbar .navbar-brand img {
-            width: 200px;
-            height: auto;
+        .imglogo{
+            width: 250px;
+            height: 90px;
         }
 
-        #navbar a {
+        .btnInscrever{
+            width: 180px;
+        }
+        
+        .IconInscrever{
+            font-size: 16px;
+            padding-right: 10px;
+        }
+
+        .IconInscrever2{
+            font-size: 21px;
+        }
+
+        #navbar{
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #navbar a:hover{
             color: #00636A;
         }
 
-        #navbar a:hover {
-            color: #004d40;
+        #navbar a.active{
+            border-bottom: 1px solid #00636A;
         }
 
-        #navbar .active {
-            border-bottom: 2px solid #00636A;
+        #navlink{
+            font-weight: bolder;
+            color: black;
         }
+
+
+        #ListaNav{
+            font-size: 14px;
+        }
+
+        .btngeral:hover {
+            background-color: #2EE59D;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .card:hover{
+            box-shadow: 10px 5px 5px rgba(107, 238, 255, 0.349);
+            transform: translateY(-3px);
+        }
+
 
     
 
@@ -89,32 +127,36 @@
 <body>
 
     <div class="navbar-content">
-        <nav class="navbar navbar-expand-lg">
+        <nav style="font-family: 'Montserrat', sans-serif;" id="navbar" class="navbar navbar-expand-sm bg-white p-0 m-0">
             <div class="container">
                 <div class="navbar-brand me-auto">
-                    <img class="imglogo" src="/Images/brand.png" alt="Logo">
+                    <img class="imglogo" src="/Images/brand.png" alt="">
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+    
                 <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav mx-auto gap-5 justify-content-center">
+                    <ul class="navbar-nav mx-auto gap-5 justify-content-center fw-normal">
                         <li class="nav-item">
-                            <a class="nav-link active" href="">Início</a>
+                            <a id="navlink" class="nav-link" href="/TelasLanding/index.html">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Sobre</a>
+                            <a id="navlink" class="nav-link" href="">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/TelaMarket/market.html">Market</a>
+                            <a id="navlink" class="nav-link" href="/TelaMarket/market.html">Market</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item pe-4">
+                            <a id="navlogin" style="color: #00636A" class="navLogin nav-link fw-bold" href="">Login</a>
+                        </li>
                         <li class="nav-item">
-                            <a href="/TelasCadastro/cadastro.html" style="background-color: #00636A; width: 180px; color: white; text-decoration: none;"
-                                class="btngeral btn text-white fw-bold">
-                                <i class="bi bi-person-add"></i> Cadastre-se</a>
+                            <a href="/TelasCadastro/cadastro.html" style="background-color: #00636A; width: 180px; color: white; text-decoration: none;" id="BtnCadastro" class="btngeral btn text-white fw-bold">
+                                <i class="IconInscrever bi bi-person-add"></i> Cadastre-se</a>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -150,40 +192,31 @@
         document.getElementById('product-form').addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Captura os dados do formulário
             const name = document.getElementById('product-name').value;
             const price = document.getElementById('product-price').value;
             const description = document.getElementById('product-description').value;
             const imageFile = document.getElementById('product-image').files[0];
 
-            // Cria um FileReader para converter a imagem em base64
             const reader = new FileReader();
             reader.onloadend = function() {
-                // Obtém o conteúdo base64 da imagem
                 const imageBase64 = reader.result;
 
-                // Cria o objeto do produto
                 const newProduct = {
                     name: name,
                     price: price,
                     description: description,
-                    image: imageBase64, // Armazena a imagem como base64
+                    image: imageBase64, 
                 };
 
-                // Recupera os produtos existentes do localStorage
                 let products = JSON.parse(localStorage.getItem('products')) || [];
 
-                // Adiciona o novo produto ao array
                 products.push(newProduct);
 
-                // Salva os produtos atualizados no localStorage
                 localStorage.setItem('products', JSON.stringify(products));
 
-                // Exibe um alert de sucesso
                 alert('Produto adicionado com sucesso!');
             };
 
-            // Lê a imagem como base64
             if (imageFile) {
                 reader.readAsDataURL(imageFile);
             } else {

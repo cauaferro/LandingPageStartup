@@ -66,7 +66,7 @@
         }
 
         .card:hover{
-            box-shadow: 10px 5px 5px rgba(107, 238, 255, 0.349);
+            box-shadow: 5px 2px 2px rgba(107, 238, 255, 0.349);
             transform: translateY(-3px);
         }
 
@@ -95,13 +95,13 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav mx-auto gap-5 justify-content-center fw-normal">
                         <li class="nav-item">
-                            <a id="navlink" class="nav-link active" href="">Início</a>
+                            <a id="navlink" class="nav-link" href="/TelasLanding/index.html">Início</a>
                         </li>
                         <li class="nav-item">
                             <a id="navlink" class="nav-link" href="">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a id="navlink" class="nav-link" href="">Market</a>
+                            <a id="navlink" class="nav-link active" href="">Market</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
@@ -114,7 +114,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" style="font-size: 25px;" class="px-3">
+                            <a href="/TelaMarket/carrinho.html" style="font-size: 25px;" class="px-3">
                             <i style="color:black;" class="bi bi-cart2"></i>
                             </a>
                         </li>
@@ -128,23 +128,14 @@
             <ol class="carousel-indicators">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active text-center" data-interval="3000">
-                    <img src="/Images/HeroMarket.png" alt="" class="img-fluid d-none d-md-block">
+                    <img style="width: 100%; height: 400px;" src="/Images/HeroMarket.png" alt="" class="img-fluid d-none d-md-block rounded-5">
                     <img src="/Images/HeroMarket.png" alt="" class="img-fluid d-block d-md-none">
                 </div>
-                <div class="carousel-item text-center" data-interval="3000">
-                    <img src="/Images/HeroMarket.png" alt="" class="img-fluid d-none d-md-block">
-                    <img src="/Images/HeroMarket.png" alt="" class="img-fluid d-block d-md-none">
-                </div>
-                <div class="carousel-item text-center" data-interval="3000">
-                    <img src="/Images/HeroMarket.png" alt="" class="img-fluid d-none d-md-block">
-                    <img src="/Images/HeroMarket.png" alt="" class="img-fluid d-block d-md-none">
-                </div>
+                
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -205,7 +196,6 @@
             <hr class="mt-3">
             <div class="row g-3">
                 <div class="row g-3" id="product-cards">
-                    <!-- Os cards serão inseridos aqui via JavaScript -->
                 </div>
             </div>
             <hr class="mt-3">
@@ -246,61 +236,93 @@
             </div>
         </div>
     </main>
+    <footer style="background-image: linear-gradient(to top, #ababab, #00636a); color: white; margin-top: 120px;" class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <h5 class="fw-bold">Sobre Nós</h5>
+                    <p class="mb-0">Nós da WhiteLabel oferecemos soluções personalizadas para o seu e-commerce. Descubra como podemos ajudar a expandir seu negócio.</p>
+                </div>
+                <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+                    <h5 class="fw-bold">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="" class="text-white text-decoration-none">Início</a></li>
+                        <li><a href="" class="text-white text-decoration-none">Sobre</a></li>
+                        <li><a href="" class="text-white text-decoration-none">Market</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <h5 class="fw-bold">Siga-nos</h5>
+                    <div>
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p class="mb-0">© 2024 WhiteLabel. Todos os direitos reservados.</p>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         window.onload = function() {
-        // Verifica se já existem produtos no localStorage
-        const products = JSON.parse(localStorage.getItem('products')) || [];
-
-        // Seleciona o contêiner dos cards
-        const productCardsContainer = document.getElementById('product-cards');
-
-        // Cria os cards dinamicamente
-        products.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.classList.add('col-xl-2', 'col-lg-3', 'col-md-4', 'col-sm-6', 'd-flex', 'align-items-stretch');
-            productCard.innerHTML = `
-                <div class="card text-center bg-light">
-                    <img class="card-img-top" src="${product.image}" alt="Imagem do produto" id="product-image">
-                    <div class="card-header" id="product-price">${product.price}</div>
-                    <div class="card-body">
-                        <h5 class="card-title" id="product-name">${product.name}</h5>
-                        <p class="card-text lines" id="product-description">${product.description}</p>
+            
+            const products = JSON.parse(localStorage.getItem('products')) || [];
+    
+            const productCardsContainer = document.getElementById('product-cards');
+    
+            products.forEach((product, index) => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('col-xl-2', 'col-lg-3', 'col-md-4', 'col-sm-6', 'd-flex', 'align-items-stretch');
+                productCard.innerHTML = `
+                    <div class="card text-center bg-light position-relative">
+                        <!-- Ícone de exclusão -->
+                        <button type="button" class="btn btn-danger btn-sm position-absolute top-0 start-0 m-2" onclick="removeProduct(${index})">
+                            <i class="bi bi-x"></i>
+                        </button>
+                        <img class="card-img-top" src="${product.image}" alt="Imagem do produto">
+                        <div class="card-header">${product.price}</div>
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text lines">${product.description}</p>
+                        </div>
+                        <div class="card-footer">
+                            <form class="d-block">
+                                <button type="button" class="btn btn-success add-to-cart text-white w-bold" data-index="${index}">Adicionar ao Carrinho</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <form class="d-block">
-                            <button type="button" class="btn btn-danger" onclick="addToCart()">Adicionar ao Carrinho</button>
-                        </form>
-                        <small class="text-success" id="product-stock">320 em estoque</small>
-                    </div>
-                </div>
-            `;
-            productCardsContainer.appendChild(productCard);
-        });
-    };
+                `;
+                productCardsContainer.appendChild(productCard);
+            });
+    
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productIndex = this.getAttribute('data-index');
+                    addToCart(products[productIndex]);
+                });
+            });
+        };
 
-        function addToCart() {
-    // Captura os dados do produto
-    const product = {
-        name: document.getElementById('product-name').innerText,
-        price: document.getElementById('product-price').innerText,
-        image: document.getElementById('product-image').src,
-        description: document.getElementById('product-description').innerText,
-    };
+        function addToCart(product) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+    
+            localStorage.setItem('cart', JSON.stringify(cart));
 
-    // Verifica se já existe um carrinho no localStorage
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Adiciona o produto ao carrinho
-    cart.push(product);
-
-    // Salva o carrinho no localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Exibe um alert informando que o produto foi adicionado ao carrinho
-    alert('Produto adicionado ao carrinho com sucesso!');
-}
-
+            alert(`${product.name} foi adicionado ao carrinho com sucesso!`);
+        }
+    
+        function removeProduct(index) {
+            const products = JSON.parse(localStorage.getItem('products')) || [];
+            products.splice(index, 1); 
+            localStorage.setItem('products', JSON.stringify(products)); 
+            location.reload(); 
+        }
     </script>
+    
 </body>
 </html>
