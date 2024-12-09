@@ -1,0 +1,19 @@
+{
+  "name": "landingpagestartup",
+  "version": "1.0.0",
+  "description": "![screencapture-127-0-0-1-5500-TelasLanding-index-html-2024-10-25-03_21_03](https://github.com/user-attachments/assets/b92bd2c5-b73e-472d-8e10-f7588ae024f5)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.8.4",
+    "multer": "^1.4.5-lts.1"
+  }
+}
